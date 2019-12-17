@@ -1,0 +1,16 @@
+typec.c:37:6:StateMachineTypeC	16	static
+typec.c:156:6:StateMachineDisabled	16	static
+typec.c:171:6:StateMachineErrorRecovery	16	static
+typec.c:182:6:StateMachineUnattached	16	static
+typec.c:264:6:StateMachineAttachWaitSink	16	static
+typec.c:431:6:StateMachineAttachedSink	16	static
+typec.c:711:6:StateMachineDebugAccessorySink	16	static
+typec.c:893:6:StateMachineIllegalCable	16	static
+typec.c:909:6:SetStateDisabled	16	static
+typec.c:925:6:SetStateErrorRecovery	16	static
+typec.c:947:6:SetStateUnattached	24	static
+typec.c:1006:6:SetStateAttachWaitSink	16	static
+typec.c:1193:6:SetStateAttachedSink	16	static
+typec.c:1345:6:SetStateTrySink	16	static
+typec.c:1427:6:SetStateDebugAccessorySink	16	static
+typec.c:1555:6:SetStateIllegalCable	16	static

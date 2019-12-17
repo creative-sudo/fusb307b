@@ -1,0 +1,2 @@
+vendor_info.c:20:6:VIF_InitializeSrcCaps	48	static
+vendor_info.c:37:6:VIF_InitializeSnkCaps	48	static

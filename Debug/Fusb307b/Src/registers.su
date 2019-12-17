@@ -1,0 +1,6 @@
+registers.c:31:9:AddressToRegister	24	static
+registers.c:241:6:GetLocalRegisters	24	static
+registers.c:369:6:RegGetRxData	32	static
+registers.c:377:6:RegSetTxData	32	static
+registers.c:385:6:RegSetBits	24	static
+registers.c:391:6:RegClearBits	24	static

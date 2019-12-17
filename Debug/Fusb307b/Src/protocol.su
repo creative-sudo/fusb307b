@@ -1,0 +1,8 @@
+protocol.c:32:6:USBPDProtocol	16	static
+protocol.c:91:6:ProtocolIdle	16	static
+protocol.c:140:6:ProtocolResetWait	16	static
+protocol.c:156:6:ProtocolGetRxPacket	24	static
+protocol.c:356:6:ProtocolTransmitMessage	24	static
+protocol.c:567:6:ProtocolSendingMessage	24	static
+protocol.c:643:6:ProtocolSendHardReset	24	static
+protocol.c:666:9:TokenToSopType	32	static

@@ -1,0 +1,6 @@
+timer.c:27:6:TimerStart	16	static
+timer.c:44:6:TimerRestart	16	static
+timer.c:49:6:TimerDisable	16	static
+timer.c:58:10:TimerDisabled	16	static
+timer.c:63:10:TimerExpired	16	static
+timer.c:75:9:TimerRemaining	24	static

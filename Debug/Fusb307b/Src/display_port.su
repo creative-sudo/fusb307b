@@ -1,0 +1,15 @@
+display_port.c:33:6:DP_Initialize	24	static
+display_port.c:65:6:DP_RequestPartnerStatus	40	static
+display_port.c:86:6:DP_RequestPartnerConfig	40	static
+display_port.c:107:6:DP_SetPortMode	16	static
+display_port.c:144:17:DP_SelectPinAssignment	32	static
+display_port.c:203:17:DP_SelectRole	24	static
+display_port.c:242:10:DP_EvaluateSinkCapability	24	static
+display_port.c:281:10:DP_ProcessCommand	32	static
+display_port.c:373:6:DP_SendPortStatus	40	static
+display_port.c:392:6:DP_SendPortConfig	48	static
+display_port.c:412:6:DP_SendAttention	40	static
+display_port.c:435:6:DP_ProcessPartnerAttention	24	static
+display_port.c:496:6:DP_UpdatePartnerStatus	24	static
+display_port.c:513:6:DP_ProcessConfigResponse	16	static
+display_port.c:534:10:DP_ProcessConfigRequest	16	static

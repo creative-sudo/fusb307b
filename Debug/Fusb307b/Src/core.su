@@ -1,0 +1,9 @@
+core.c:22:6:core_initialize	16	static
+core.c:29:6:core_state_machine	24	static
+core.c:57:6:core_enable_typec	16	static
+core.c:62:9:core_get_next_timeout	24	static
+core.c:101:6:core_set_advertised_current	16	static
+core.c:109:8:core_get_rev_lower	4	static
+core.c:117:8:core_get_rev_middle	4	static
+core.c:125:8:core_get_rev_upper	4	static
+core.c:130:6:core_set_state_unattached	16	static
