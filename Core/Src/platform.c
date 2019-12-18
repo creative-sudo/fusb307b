@@ -88,12 +88,12 @@ void PlatformInitialize(void)
   UARTXmitBuffer_IsPing = TRUE;
 #endif /* FSC_HAVE_UART */
 
-  //SystemClockConfig();
+  SystemClockConfig();
 
-  //InitializePeripheralClocks();
+  InitializePeripheralClocks();
 
   //HAL_Init();
-  //HAL_InitTick(1);
+  HAL_InitTick(1);
 
   //InitializeI2C();
   //InitializeGPIO();
@@ -106,6 +106,74 @@ void PlatformInitialize(void)
   FAN6295_Initialize();
 #endif /* FSC_HAVE_6295 */
 }
+
+void InitializePeripheralClocks(void)
+{
+  /* A single spot for turning on all of the peripheral clocks to be used. */
+
+  /* GPIO A/B */
+  //RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+  //RCC->AHBENR |= RCC_AHBENR_GPIOBEN;
+
+  /* I2C2 */
+  //RCC->APB1ENR |= RCC_APB1ENR_I2C3EN;
+
+  /* Timers 1,2,3 */
+  //RCC->APB2ENR |= RCC_APB2ENR_TIM1EN;
+  //RCC->APB1ENR |= RCC_APB1ENR_TIM8EN;
+  //RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;
+
+#ifdef FSC_HAVE_UART
+  /* USART2 */
+  RCC->APB1ENR |= RCC_APB1ENR_USART2EN;
+
+  /* DMA1 */
+  RCC->AHBENR |= RCC_AHBENR_DMA1EN;
+#endif /* FSC_HAVE_UART */
+}
+
+void SystemClockConfig(void)
+{
+  /* The system Clock is configured as follow :
+   *   System Clock source            = PLL (HSI48)
+   *   SYSCLK(Hz)                     = 48000000
+   *   HCLK(Hz)                       = 48000000
+   *   AHB Prescaler                  = 1
+   *   APB1 Prescaler                 = 1
+   *   HSI Frequency(Hz)              = 48000000
+   *   PREDIV                         = 2
+   *   PLLMUL                         = 2
+   *   Flash Latency(WS)              = 1
+   */
+
+  /* Enable HSI, HSI48 */
+  RCC->CR |= RCC_CR_HSION;
+  //RCC->CR2 |= RCC_CR2_HSI48ON;
+
+  /* Wait on peripheral to start */
+  //while (!(RCC->CR2 & RCC_CR2_HSI48RDY)) {};
+
+  /* Config PLL - Predivide by 2 */
+  //RCC->CFGR |= RCC_CFGR_PLLSRC_HSI48_PREDIV;
+  //RCC->CFGR2 |= RCC_CFGR2_PREDIV_DIV2;
+
+  /* Enable PLL */
+  RCC->CR |= RCC_CR_PLLON;
+
+  /* Wait on PLL to start */
+  while (!(RCC->CR & RCC_CR_PLLRDY)) {};
+
+  /* Set Flash latency bit 1 */
+  FLASH->ACR |= FLASH_ACR_LATENCY;
+
+  /* No dividers and use the PLL for the system clock. */
+  RCC->CFGR |= RCC_CFGR_HPRE_DIV1;
+  RCC->CFGR |= RCC_CFGR_SW_PLL;
+  //RCC->CFGR |= RCC_CFGR_PPRE_DIV1;
+
+  //RCC->CFGR3 = 0x00;
+}
+
 
 FSC_BOOL platform_i2c_read(FSC_U8 slaveaddress, FSC_U8 regaddr,
                            FSC_U8 length, FSC_U8 *data)

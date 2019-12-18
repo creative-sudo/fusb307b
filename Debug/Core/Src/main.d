@@ -27,6 +27,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h \
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h \
  ../Fusb307b/Inc/FSCTypes.h ../Core/Inc/local_platform.h \
  ../Fusb307b/Inc/port.h ../Fusb307b/Inc/platform.h \
  ../Fusb307b/Inc/FSCTypes.h ../Fusb307b/Inc/TypeCTypes.h \
@@ -96,6 +101,16 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h:
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h:
+
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h:
+
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
+
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h:
+
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h:
+
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h:
 
 ../Fusb307b/Inc/FSCTypes.h:
 
